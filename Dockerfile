@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM php:5-apache
 
 ADD https://github.com/rapid7/hackazon/archive/master.zip /tmp/
 RUN apt update && apt install sendmail unzip -y \

@@ -9,7 +9,7 @@ services:
       - hackazon_db
 
   hackazon_db:
-    image: mariadb:10
+    image: mysql:5.5
     environment:
       - MYSQL_ROOT_PASSWORD=hackazon
       - MYSQL_DATABASE=hackazon

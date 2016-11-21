@@ -1,0 +1,20 @@
+version: '2'
+services:
+  hackazon_www:
+    build: .
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - hackazon_db
+
+  hackazon_db:
+    image: mariadb:10
+    environment:
+      - MYSQL_ROOT_PASSWORD=hackazon
+      - MYSQL_DATABASE=hackazon
+      - MYSQL_USER=hackazon
+      - MYSQL_PASSWORD=hackazon
+    restart: always
+    volumes:
+      - ./db_init/hackazon/:/docker-entrypoint-initdb.d:ro

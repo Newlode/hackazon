@@ -1,3 +1,4 @@
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ALLOW_INVALID_DATES';
 DROP TABLE IF EXISTS `tbl_users`;
 CREATE TABLE `tbl_users` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,

@@ -8,7 +8,20 @@ RUN apt update && apt install sendmail unzip -y \
     && docker-php-source extract && docker-php-ext-install -j$(nproc) bcmath pdo_mysql \
     && rm -R /tmp/* && docker-php-source delete && apt-get autoremove -y && apt-get autoclean
 
-RUN chown -R www-data:www-data /var/www/html/
 
 ADD config/db.sample.php /var/www/html/assets/config/db.php
+RUN chown -R www-data:www-data /var/www/html/
+
 ADD config/000-default.conf /etc/apache2/sites-available/000-default.conf
+
+
+# apache env vars
+ENV APACHE_LOCK_DIR /var/lock
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2/
+ENV APACHE_PID_FILE /var/apache.pid
+
+EXPOSE 80 443
+
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

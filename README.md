@@ -7,3 +7,16 @@ Hackazon is a vulnerable test application site, that incorporates a realistic e-
 This guide will allow you to setup a testing environment, enable you to see problems in action from an attacker’s perspective, and identify the fundamental issues which make such attacks possible.
 
 [Hackazon_User's_Guide.pdf](https://community.rapid7.com/servlet/JiveServlet/downloadBody/3452-102-3-8267/Hackazon_User%27s_Guide.pdf)
+
+## How to use this project 
+
+Clone this repo 
+```
+git clone https://github.com/Newlode/hackazon/
+```
+
+Build and start 
+```
+cd hackazon/
+docker-compose up
+```

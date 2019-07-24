@@ -20,3 +20,18 @@ Build and start
 cd hackazon/
 docker-compose up
 ```
+
+Wait for 10 secondes and contact the server :
+```
+firefox http://127.0.0.1:80
+
+chromium http://127.0.0.1:80
+```
+
+## Configure
+
+The project is configured by the files 
+- [docker-compose.yml](https://github.com/Newlode/hackazon/blob/master/docker-compose.yml)
+- [config/db.sample.php](https://github.com/Newlode/hackazon/blob/master/docker-compose.yml)
+
+

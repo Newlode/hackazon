@@ -11,18 +11,18 @@ This guide will allow you to setup a testing environment, enable you to see prob
 ## How to use this project 
 
 Clone this repo 
-```
+```shell
 git clone https://github.com/Newlode/hackazon/
 ```
 
 Build and start 
-```
+```shell
 cd hackazon/
 docker-compose up
 ```
 
 Wait for 10 secondes and contact the server :
-```
+```shell
 firefox http://127.0.0.1:80
 
 chromium http://127.0.0.1:80
@@ -33,5 +33,3 @@ chromium http://127.0.0.1:80
 The project is configured by the files 
 - [docker-compose.yml](https://github.com/Newlode/hackazon/blob/master/docker-compose.yml)
 - [config/db.sample.php](https://github.com/Newlode/hackazon/blob/master/docker-compose.yml)
-
-
